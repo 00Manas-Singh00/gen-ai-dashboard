@@ -33,6 +33,7 @@ npm start
 The app will run on http://localhost:3000
 
 ## Project Structure
+```
 src/
 ├── app/
 │   └── store.js          # Redux store configuration
@@ -45,7 +46,7 @@ src/
 │   └── ResultsDisplay.jsx# Chart visualization
 ├── App.js                # Main application layout
 └── index.js              # Entry point
-
+```
 ## Technology Stack
 
 - **React** - UI component library
