@@ -32,6 +32,9 @@ npm start
 ```
 The app will run on http://localhost:3000
 
+## Deployed Link:
+[Growth Gear](https://growthgear.netlify.app/)
+
 ## Project Structure
 ```
 src/
