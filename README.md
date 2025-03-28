@@ -1,46 +1,81 @@
-# Getting Started with Create React App and Redux
+# Gen AI Analytics Dashboard Prototype
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+A React-based dashboard prototype demonstrating natural language query interaction and data visualization using mock AI processing.
 
-## Available Scripts
+![Dashboard Screenshot](./public/dashboard.png)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+-  Natural language query input
+-  Mock AI processing simulation
+-  Query history tracking
+-  Data visualization using Recharts
+-  Loading state animations
+-  Error state handling
+-  Responsive design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/gen-ai-dashboard.git
+cd gen-ai-dashboard
+```
 
-### `npm test`
+2. **Install dependencies**
+```bash
+npm install
+```
+3. **Start Development Server**
+```bash
+npm start
+```
+The app will run on http://localhost:3000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
+src/
+├── app/
+│   └── store.js          # Redux store configuration
+├── features/
+│   └── query/
+│       └── querySlice.js # Query state management
+├── components/
+│   ├── QueryInput.jsx    # Search input component
+│   ├── QueryHistory.jsx  # Query history panel
+│   └── ResultsDisplay.jsx# Chart visualization
+├── App.js                # Main application layout
+└── index.js              # Entry point
 
-### `npm run build`
+## Technology Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React** - UI component library
+- **Redux Toolkit** - State management
+- **Material-UI** - UI components and styling
+- **Recharts** - Data visualization
+- **React Redux** - React/Redux integration
+- **React Icons** - Icon library
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## State Management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The Redux store manages the following state:
 
-### `npm run eject`
+- Query history
+- Current results
+- Loading states
+- Error messages
+- AI suggestions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Key Redux Concepts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Slice**: `querySlice.js` handles all query-related logic.
+- **Async Thunk**: `processQuery` simulates AI processing.
+- **Selectors**: Access state values from components.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Simulated AI Processing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The mock AI system:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Generates random data points.
+- Returns a consistent data structure.
+- Simulates a 1.5s API delay.
+- Has a 10% random error rate.
